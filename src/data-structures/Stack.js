@@ -1,6 +1,6 @@
-import LinkedList from './LinkedList';
+const LinkedList = require('./LinkedList.js');
 
-export default class Stack {
+module.exports = class Stack {
     constructor() {
         this.list = new LinkedList();
     }

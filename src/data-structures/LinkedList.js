@@ -83,6 +83,19 @@ module.exports = class LinkedList {
         return deletedHead;
     }
 
+    find(callback) {
+        if(!this.head) {
+            return null;
+        }
+        const node = this.toArray().find(node => callback(node));
+        
+        if(!node) {
+            return null;
+        }
+
+        return node;    
+    }
+
     toArray() {
         const nodes = [];
 

@@ -1,53 +1,26 @@
-const LinkedList = require('./data-structures/LinkedList');
-const DoublyLinkedList = require('./data-structures/DoublyLinkedList');
+const HashTable = require('./data-structures/HashTable');
 
-const Alice = {
-    name: 'Alice',
-    age: 23,
-    gender: 'F'
+const Alfred = {
+    name: 'Alfred',
+    age: 23
+};
+const Meggie = {
+    name: 'Meggie',
+    age: 41
 };
 const Edgar = {
     name: 'Edgar',
-    age: 24,
-    gender: 'M'
-};
-const Avi = { 
-    name: 'Avi',
-    age: 24,
-    gender: 'M'
-};
-const Mlissa = {
-    name: 'Mlissa',
-    age: 25,
-    gender: 'F'
-};
-const LastVonTier = {
-    name: 'Last Von Tier',
-    age: 54,
-    gender: 'M'
-};
-const TheLast = {
-    name: 'The last last',
-    age: 0,
-    gender: 'N'
-};
-const Loren = {
-    name: 'Loren',
-    age: 42,
-    gender: 'F'
+    age: 24
 };
 
-let list = new DoublyLinkedList();
-const people = [Alice, Edgar, Avi, Mlissa];
-people.forEach(p => list.append(p));
+let userTable = new HashTable();
 
-list.prepend(LastVonTier);
-list.prepend(TheLast);
-list.delete(Edgar);
+userTable.set(Edgar.name, Edgar);
+userTable.set(Alfred.name, Alfred);
+userTable.set(Meggie.name, Meggie);
 
-list.toArray().forEach(node => {
-    console.log(`value: ${node.value.name} | next: ${node.next ? node.next.value.name : null} | prev: ${node.prev ? node.prev.value.name : null}`)
-})
-
-console.log(list.contains(Edgar));
-console.log(list.contains(Mlissa));
+console.log(userTable.getKeys());
+console.log(userTable.get(Edgar.name))
+console.log(userTable.delete(Edgar.name));
+console.log(userTable.getKeys())
+console.log(`Has? ${userTable.has(Meggie.name)}`);
