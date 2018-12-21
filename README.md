@@ -8,3 +8,4 @@ Data Structures
 * [Queue](https://github.com/edgarzapeka/javascript_algorithms/blob/master/src/data-structures/Queue.js)
 * [Stack](https://github.com/edgarzapeka/javascript_algorithms/blob/master/src/data-structures/Stack.js)
 * [HashTable](https://github.com/edgarzapeka/javascript_algorithms/blob/master/src/data-structures/HashTable.js)
+* [Heap](https://github.com/edgarzapeka/javascript_algorithms/blob/master/src/data-structures/Heap.js)
